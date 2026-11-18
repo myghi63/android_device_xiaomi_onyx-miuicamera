@@ -1,4 +1,5 @@
-# All unpinned blobs below are extracted from onyx OS3.0.7.0.WOLMIXM
+# All unpinned blobs below are extracted from onyx OS3.0.303.0.WOLMIXM
+# (MiuiCamera 6.4.000380.0; blob-patches re-based to this version + apktool 3.0.3 decode)
 
 product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk
 system_ext/lib64/libcamera_algoup_jni.xiaomi.so:system/lib64/libcamera_algoup_jni.xiaomi.so
