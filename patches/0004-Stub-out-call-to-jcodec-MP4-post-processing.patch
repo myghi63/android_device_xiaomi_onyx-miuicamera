@@ -1,7 +1,7 @@
 From 8b778186a9492d617e403738ecdce42e2977dbc5 Mon Sep 17 00:00:00 2001
 From: AdarshGrewal <adarshgrewal@gmail.com>
 Date: Sun, 7 Jun 2026 15:59:45 +0530
-Subject: [PATCH 4/7] Stub out call to jcodec MP4 post-processing
+Subject: [PATCH 4/7] Stub out call to jcodec MP4 post-processing (re-based to 6.4.000380.0)
 
 * this seems to be only for MP4 cover tag
 ---
@@ -191,7 +191,7 @@ index 068d694a..922aa20b 100644
 -
 -    check-cast v2, Lorg/jcodec/containers/mp4/boxes/MovieBox;
 -
--    invoke-interface {p1, v2}, LFj/b;->b(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
+-    invoke-interface {p1, v2}, LFj/b;->i(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
 -
 -    iget-wide v3, v4, Lorg/jcodec/containers/mp4/boxes/b;->b:J
 -    :try_end_5
