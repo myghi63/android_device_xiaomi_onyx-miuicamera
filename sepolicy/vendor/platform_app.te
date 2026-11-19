@@ -3,6 +3,16 @@ binder_call(platform_app_36, hal_camera_default)
 
 allow platform_app_36 hal_aidlbgservice_service:service_manager find;
 
+# vendor_hal_qspmhal_service is declared with hal_attribute_service(), which neverallows
+# service_manager find for anything outside vendor_hal_qspmhal_client - use the macro
+# (qcom itself does this for untrusted_app*).
+hal_client_domain(platform_app_36, vendor_hal_qspmhal)
+
+# MCAM_PSIUtils samples /proc/pressure/* to throttle the image-processing threads
+allow platform_app_36 proc_pressure_cpu:file r_file_perms;
+allow platform_app_36 proc_pressure_mem:file r_file_perms;
+allow platform_app_36 proc_pressure_io:file r_file_perms;
+
 allow platform_app_36 adsprpcd_file:dir { open read search };
 
 allow platform_app_36 vendor_camera_data_file:dir { append map r_dir_perms write };
