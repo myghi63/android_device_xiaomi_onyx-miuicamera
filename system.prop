@@ -2,7 +2,10 @@
 ro.com.google.lens.oem_camera_package=com.android.camera
 
 # Framework allowlists
-persist.vendor.camera.privapp.list=com.android.camera,org.lineageos.aperture
+# Only honoured by ROMs whose CameraService reads this property (AOSP and LineageOS
+# ignore it). Listing a second camera app there lets it connect while the stock camera
+# app holds a conflicting camera, which leaves two HAL sessions on one sensor.
+persist.vendor.camera.privapp.list=com.android.camera
 
 # MiuiCamera
 ro.miui.notch=1
