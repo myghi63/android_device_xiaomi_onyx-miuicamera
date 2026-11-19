@@ -1,0 +1,4 @@
+# MiSyS stub HAL (misys/aidl). Without these the names fall through to the
+# default_android_service catch-all and the stock camera app is denied the find.
+vendor.xiaomi.hardware.misys.common.IMiSysImpl/default     u:object_r:hal_misys_vendor_service:s0
+vendor.xiaomi.hardware.misys.common.IHypSysIntl/default    u:object_r:hal_misys_vendor_service:s0

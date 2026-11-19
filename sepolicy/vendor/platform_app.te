@@ -20,6 +20,10 @@ allow platform_app_36 vendor_camera_data_file:file { getattr open read };
 
 allow platform_app_36 app_data_file:file execute;
 
+# MiSyS file proxy (misys/): the stock camera app finds the stub to write and read the
+# watermark templates / video-filter LUTs it keeps under /data/vendor/camera.
+allow platform_app_36 hal_misys_vendor_service:service_manager find;
+
 # Properties
 get_prop(platform_app_36, vendor_audio_prop)
 get_prop(platform_app_36, vendor_camera_p3enable_prop)
